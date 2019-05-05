@@ -1,3 +1,6 @@
+#Scott Otto Flask portion Homework 10
+
+
 # Design a Flask API based on the queries that you have just developed
 # Use Flask to create your routes per instructions
 import numpy as np
