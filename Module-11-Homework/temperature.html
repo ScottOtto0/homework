@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latitude</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="reset.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!--BEGIN NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./landingPage.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./temperature.html">Temperature</a>
+                    <a class="dropdown-item" href="./humidity.html">Humidity</a>
+                    <a class="dropdown-item" href="./windspeed.html">Wind Speed</a>
+                    <a class="dropdown-item" href="./cloudiness.html">Cloudiness</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./comparison.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./data.html">Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!--END NAVIGATION-->
+<!--one row two boxes-->
+<br>
+<br>
+<br>
+<div class="flex-container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="box">
+                <header>
+                    <h1>Max Temperature</h1>
+                </header>
+                <hr>
+                    <div class="clearfix">
+                        <img src="Resources/assets/images/Fig1.png" class="img-fluid mx-auto" width="400px"
+                        alt="image">
+                    </div>
+                    <br>
+                    <p>
+                       <h2>
+                           Here we plotted the maximum temperature for each of the cities to correspond with its latitudinal coordinate.  As one might expect, due to it being winter in the Northern Hemisphere, the temperatures are much cooler as you go from 0-90 degrees North Latitude, and as it is summer in the Southern Hemisphere, maximum temperatures are above zero in the cities plotted below the equator (0).
+                       </h2>
+                    </p>
+            </div>
+        </div>
+        <div class="col-md-5">
+                <div class="box">
+                        <header>
+                            <h1>Visualizations</h1>
+                        </header>
+                        <hr>
+                            <div class="row">
+                            <div class="col-md-6">
+                                <a href="temperature.html"><img src="Resources/assets/images/Fig1.png" class="img-fluid" alt="Responsive image"></a>
+                                <a href="humidity.html"><img src ="Resources/assets/images/Fig2.png" class="img-fluid" alt="Responsive image"></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="cloudiness.html"><img src="Resources/assets/images/Fig3.png" class="img-fluid" alt="Responsive image"></a>
+                                <a href="windspeed.html"><img src="Resources/assets/images/Fig4.png" class="img-fluid" alt="Responsive image"></a>
+                            </div>
+                            </div>  
+                 </div>
+        </div>
+    </div>
+</div>
+<!--END container = one row two boxes-->
+
+
+
+
+</body>
+</html>

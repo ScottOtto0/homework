@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latitude</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="reset.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!--BEGIN NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./landingPage.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./temperature.html">Temperature</a>
+                    <a class="dropdown-item" href="./humidity.html">Humidity</a>
+                    <a class="dropdown-item" href="./windspeed.html">Wind Speed</a>
+                    <a class="dropdown-item" href="./cloudiness.html">Cloudiness</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./comparison.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./data.html">Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!--END NAVIGATION-->
+<br>
+<br>
+<br>
+<div class="flex-container">
+    <div class="box">
+        <header>
+            <h1>Comparison:  Latitude vs. X</h1>
+        </header>
+        <hr>
+        <p>
+            <h2>Click any plot to get an in-dept analysis.</h2>
+        </p>
+        <br>
+        <div class="box row">
+            <div class="col-6">
+                <header>
+                    <h2><center>vs. Max Temperature</center></h2>
+                </header>
+                <a href="temperature.html"><img src="Resources/assets/images/Fig1.png" class="img-fluid" alt="Responsive image"></a>
+                <header>
+                    <h2><center>vs. Humidity</center></h2>
+                </header>
+                <a href="humidity.html"><img src="Resources/assets/images/Fig2.png" class="img-fluid" alt="Responsive image"></a>
+            </div>
+            <div class="col-6">
+                <header>
+                    <h2><center>vs. Cloudiness</center></h2>
+                </header>
+                <a href="cloudiness.html"><img src="Resources/assets/images/Fig3.png" class="img-fluid" alt="Responsive image"></a>
+                <header>
+                    <h2><center>vs. Wind Speed</center></h2>
+                </header>
+                <a href="windspeed.html"><img src="Resources/assets/images/Fig4.png" class="img-fluid" alt="Responsive image"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
