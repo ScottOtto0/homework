@@ -211,7 +211,7 @@ d3.csv("../assets/data/data.csv")
 
 // OR not last line above and this instead
 //// =============================================================================
-//circlesGroup.data(census_data).append("text").text(d=>d.abbr)
+// circlesGroup.data(census_data).append("text").text(d=>d.abbr)
 // =============================================================================
 
   // Create group for  3 x- axis labels
@@ -306,7 +306,7 @@ d3.csv("../assets/data/data.csv")
         xAxis = renderAxes(xLinearScale, xAxis);
 
         // updates circles with new x values
-        circlesGroup = renderCircles(circlesGroup, xLinearScale, chosenXAxis);
+        circlesGroup = renderCircles(circlesGroup, xLinearScale, chosenXAxis, yLinearScale, chosenYAxis);
 
         // updates tooltips with new info
         circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
@@ -370,7 +370,7 @@ d3.csv("../assets/data/data.csv")
       yAxis = renderAxes(yLinearScale, yAxis);
 
       // updates circles with new Y values
-      circlesGroup = renderCircles(circlesGroup, yLinearScale, chosenYAxis);
+      //circlesGroup = renderCircles(circlesGroup, yLinearScale, chosenYAxis);
 
       // updates tooltips with new info
       circlesGroup = updateToolTip(chosenYAxis, circlesGroup);
