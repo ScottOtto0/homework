@@ -1,3 +1,5 @@
+//Scott Otto D3 Homework Module 16
+
 // @TODO: YOUR CODE HERE!
 
 var svgWidth = 960;
@@ -26,7 +28,7 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Initial Params
-var chosenXAxis = "income";
+var chosenXAxis = "poverty";
 
 // function used for updating x-scale var upon click on axis label
 function xScale(censusData, chosenXAxis) {
@@ -113,39 +115,32 @@ function renderLabels(circleLabels, newXScale, chosenXAxis, newYScale, chosenYAx
 // function used for updating circles group with new tooltip
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
-  if (chosenXAxis === "poverty") {
-    var label = "In Poverty (Median)";
-  }
-  if (chosenXAxis === "age") {
-    var label = "Age (Median)";
-  }
-  if (chosenXAxis === "income") {
-    var label = "Household Income (Median)";
-  }
-
   var toolTip = d3.tip()
     .attr("class", "tooltip")
     .offset([80,-60])
     .html(function(d) {
       return (`${d.state}<br>
-      "In Poverty (%): "${d.poverty}<br>
-      "Household Income (Median): "${d.income}<br>
-      "Smokers (%): "${d.smokes}<br>
-      "Obesity (%): "${d.obesity}<br>
-      "Lack Healthcare (%): "${d.healthcare}<br>
-      "Age (Median): "${d.age}`);
+      In Poverty (%): ${d.poverty}<br>
+      Household Income (Median): ${d.income}<br>
+      Smokers (%): ${d.smokes}<br>
+      Obesity (%): ${d.obesity}<br>
+      Lack Healthcare (%): ${d.healthcare}<br>
+      Age (Median): ${d.age}`);
     });
 
-  //circlesGroup.call(toolTip);
+  circlesGroup.call(toolTip);
 
-/*   circlesGroup.on("mouseover", function(data) {
-    toolTip.show(data);
+  circlesGroup.on("mouseover", function(data) {
+    toolTip.show(data, this);
   })
-    // onmouseout event
-    .on("mouseout", function(data, index) {
-      toolTip.hide(data);
-    });
-*/
+  circlesGroup.on("mouseout", function(data, index) {
+     window.setTimeout(function(){
+       toolTip.hide(data, this);
+     }, 5000)
+
+   });
+
+
   return circlesGroup;
 } 
 
@@ -231,7 +226,7 @@ d3.csv("../assets/data/data.csv")
     .attr("x", 0)
     .attr("y", 20)
     .attr("value", "poverty") // value to grab for event listener
-    .classed("inactive", true)
+    .classed("active", true)
     .text("In Poverty (%)");
 
   var ageLabel = xLabelsGroup.append("text")
@@ -319,7 +314,7 @@ d3.csv("../assets/data/data.csv")
         circleLabels = renderLabels(circleLabels, xLinearScale, chosenXAxis, yLinearScale, chosenYAxis);
 
         // updates tooltips with new info
-        circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
+        circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);
 
         // changes classes to change bold text
         if (chosenXAxis === "poverty") {
@@ -385,10 +380,10 @@ d3.csv("../assets/data/data.csv")
       circleLabels = renderLabels(circleLabels, xLinearScale, chosenXAxis, yLinearScale, chosenYAxis);
 
       // updates tooltips with new info
-      circlesGroup = updateToolTip(chosenYAxis, circlesGroup);
+      circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);
 
       // changes classes to change bold text on Y Axis
-      if (chosenYAxis === "poverty") {
+      if (chosenYAxis === "obesity") {
         obesityLabel
           .classed("active", true)
           .classed("inactive", false);
@@ -406,7 +401,7 @@ d3.csv("../assets/data/data.csv")
         smokesLabel
           .classed("active", true)
           .classed("inactive", false);
-        heathlcareLabel
+        healthcareLabel
           .classed("active", false)
           .classed("inactive", true);
       }
