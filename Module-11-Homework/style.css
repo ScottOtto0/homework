@@ -1,0 +1,52 @@
+
+
+
+body {
+  background: lightgray;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+
+.big-image {
+  width: 70%;
+}
+
+  .flex-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    background: lightgray; 
+  }
+
+  .flex-container .box {
+    background-color: #f1f1f1;
+    width: 100%;
+    margin: 10px;
+    text-align: left;
+    line-height: auto;
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  h1 {
+      font-size: 24pt;
+      
+      color: rgb(43, 182, 168);
+  }
+  
+  h2 {
+      font-size: 16pt;
+      text-justify: auto;
+      line-height: auto;
+  }
+
+  hr {
+    line-height: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }

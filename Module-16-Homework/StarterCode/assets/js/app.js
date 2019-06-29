@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+//Scott Otto D3 Homework Module 16
+
+>>>>>>> module-16-homework
 // @TODO: YOUR CODE HERE!
 
 var svgWidth = 960;
@@ -26,7 +31,11 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Initial Params
+<<<<<<< HEAD
 var chosenXAxis = "income";
+=======
+var chosenXAxis = "poverty";
+>>>>>>> module-16-homework
 
 // function used for updating x-scale var upon click on axis label
 function xScale(censusData, chosenXAxis) {
@@ -113,6 +122,7 @@ function renderLabels(circleLabels, newXScale, chosenXAxis, newYScale, chosenYAx
 // function used for updating circles group with new tooltip
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
+<<<<<<< HEAD
   if (chosenXAxis === "poverty") {
     var label = "In Poverty (Median)";
   }
@@ -123,11 +133,14 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     var label = "Household Income (Median)";
   }
 
+=======
+>>>>>>> module-16-homework
   var toolTip = d3.tip()
     .attr("class", "tooltip")
     .offset([80,-60])
     .html(function(d) {
       return (`${d.state}<br>
+<<<<<<< HEAD
       "In Poverty (%): "${d.poverty}<br>
       "Household Income (Median): "${d.income}<br>
       "Smokers (%): "${d.smokes}<br>
@@ -146,6 +159,29 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
       toolTip.hide(data);
     });
 */
+=======
+      In Poverty (%): ${d.poverty}<br>
+      Household Income (Median): ${d.income}<br>
+      Smokers (%): ${d.smokes}<br>
+      Obesity (%): ${d.obesity}<br>
+      Lack Healthcare (%): ${d.healthcare}<br>
+      Age (Median): ${d.age}`);
+    });
+
+  circlesGroup.call(toolTip);
+
+  circlesGroup.on("mouseover", function(data) {
+    toolTip.show(data, this);
+  })
+  circlesGroup.on("mouseout", function(data, index) {
+     window.setTimeout(function(){
+       toolTip.hide(data, this);
+     }, 5000)
+
+   });
+
+
+>>>>>>> module-16-homework
   return circlesGroup;
 } 
 
@@ -231,7 +267,11 @@ d3.csv("../assets/data/data.csv")
     .attr("x", 0)
     .attr("y", 20)
     .attr("value", "poverty") // value to grab for event listener
+<<<<<<< HEAD
     .classed("inactive", true)
+=======
+    .classed("active", true)
+>>>>>>> module-16-homework
     .text("In Poverty (%)");
 
   var ageLabel = xLabelsGroup.append("text")
@@ -319,7 +359,11 @@ d3.csv("../assets/data/data.csv")
         circleLabels = renderLabels(circleLabels, xLinearScale, chosenXAxis, yLinearScale, chosenYAxis);
 
         // updates tooltips with new info
+<<<<<<< HEAD
         circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
+=======
+        circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);
+>>>>>>> module-16-homework
 
         // changes classes to change bold text
         if (chosenXAxis === "poverty") {
@@ -385,10 +429,17 @@ d3.csv("../assets/data/data.csv")
       circleLabels = renderLabels(circleLabels, xLinearScale, chosenXAxis, yLinearScale, chosenYAxis);
 
       // updates tooltips with new info
+<<<<<<< HEAD
       circlesGroup = updateToolTip(chosenYAxis, circlesGroup);
 
       // changes classes to change bold text on Y Axis
       if (chosenYAxis === "poverty") {
+=======
+      circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);
+
+      // changes classes to change bold text on Y Axis
+      if (chosenYAxis === "obesity") {
+>>>>>>> module-16-homework
         obesityLabel
           .classed("active", true)
           .classed("inactive", false);
@@ -406,7 +457,11 @@ d3.csv("../assets/data/data.csv")
         smokesLabel
           .classed("active", true)
           .classed("inactive", false);
+<<<<<<< HEAD
         heathlcareLabel
+=======
+        healthcareLabel
+>>>>>>> module-16-homework
           .classed("active", false)
           .classed("inactive", true);
       }
