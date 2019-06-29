@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 # Unit 14 | Assignment - JavaScript and DOM Manipulation
 
 ## Background
@@ -52,4 +50,4 @@ You can handle this... right? The planet Earth needs to know what we have found!
 ### Copyright
 
 Data Boot Camp © 2018. All Rights Reserved.
->>>>>>> module-14-homework
+
