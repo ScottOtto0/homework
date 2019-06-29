@@ -1,0 +1,2 @@
+// API key
+const API_KEY = "pk.eyJ1Ijoic2hhcnBsZXMiLCJhIjoiY2p4MTBuOTh3MDJxODN6bm85aXlwOXQ0ciJ9.MRg7g7_5YW6l_TRmMV3kNQ";
