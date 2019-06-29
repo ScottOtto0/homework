@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # Unit 16 | Assignment - Data Journalism and D3
 
 ![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
@@ -70,4 +67,3 @@ Your final product will be assessed on the following metrics:
 ## Copyright
 
 Data Boot Camp © 2018. All Rights Reserved.
->>>>>>> module-16-homework
