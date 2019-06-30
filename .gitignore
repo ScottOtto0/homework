@@ -104,8 +104,8 @@ venv.bak/
 .mypy_cache/
 
 #my additions
-config.js
-config.py
+#config.js
+#config.py
 api_keys.py
-
+.DS_Store
 /.vscode
